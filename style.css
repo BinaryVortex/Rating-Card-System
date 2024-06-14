@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+body{
+    font-family: "raleway",sans-serif;
+    background: linear-gradient(to right, #83a4d4, #b6fbff);
+}
+
+.container{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fb-rating-card{
+    display: flex;
+    padding: 0.625rem 1.875rem 3.125rem;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.fb-rating-card .card-container{
+    position: relative;
+    padding: 12.5rem 2.5rem 1.25rem;
+}
+
+.fb-rating-card .card-container .icon{
+    height: 6.25rem;
+    width: 6.25rem;
+    position: absolute;
+    top: 1.25rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-bottom: 2.5rem;
+    background-image: url(img/reactions.png);
+    background-size: 46.25rem;
+    background-repeat: no-repeat;
+    border-radius: 500px;
+    transition: all ease 0.2s;
+    border: 0.625rem solid #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.fb-rating-card .card-container .icon::after{
+    content: "rate us";
+    position: absolute;
+    bottom: -2.8125rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #212121;
+}
+
+.fb-rating-card .card-container input[type=radio]{
+    display: none;
+}
+
+.fb-rating-card .card-container input[type=radio] + label{
+    display: inline-flex;
+    height: 1.25rem;
+    width: 1.25rem;
+    margin: 0 0.625rem;
+    border-radius: 500px;
+    background-color: #212121;
+    position: relative;
+}
+
+.fb-rating-card .card-container input[type=radio] + label:hover{
+    cursor: pointer;
+}
+
+.fb-rating-card .card-container input[type=radio] + label::after{
+    content: "";
+    position: absolute;
+    height: 0.625rem;
+    width: 0.625rem;
+    background-color: #fcda6a;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 500px;
+    transform: scale(0);
+    transition: all ease 0.2s;
+}
+
+.fb-rating-card .card-container input[type=radio]#like:checked + label::after{
+    transform: scale(1);
+}
+
+.fb-rating-card .card-container input[type=radio]#like:checked ~ .icon{
+    background-position: 0rem 0;
+}
+
+.fb-rating-card .card-container input[type=radio]#like:checked ~ .icon::after{
+    content: "like";
+}
+
+.fb-rating-card .card-container input[type=radio]#love:checked + label::after{
+    transform: scale(1);
+}
+
+.fb-rating-card .card-container input[type=radio]#love:checked ~ .icon{
+    background-position: -8rem 0;
+}
+
+.fb-rating-card .card-container input[type=radio]#love:checked ~ .icon::after{
+    content: "love";
+}
+
+.fb-rating-card .card-container input[type=radio]#haha:checked + label::after{
+    transform: scale(1);
+}
+
+.fb-rating-card .card-container input[type=radio]#haha:checked ~ .icon{
+    background-position: -16rem 0;
+}
+
+.fb-rating-card .card-container input[type=radio]#haha:checked ~ .icon::after{
+    content: "haha";
+}
+
+.fb-rating-card .card-container input[type=radio]#wow:checked + label::after{
+    transform: scale(1);
+}
+
+.fb-rating-card .card-container input[type=radio]#wow:checked ~ .icon{
+    background-position: -24rem 0;
+}
+
+.fb-rating-card .card-container input[type=radio]#wow:checked ~ .icon::after{
+    content: "wow";
+}
+
+.fb-rating-card .card-container input[type=radio]#sad:checked + label::after{
+    transform: scale(1);
+}
+
+.fb-rating-card .card-container input[type=radio]#sad:checked ~ .icon{
+    background-position: -32rem 0;
+}
+
+.fb-rating-card .card-container input[type=radio]#sad:checked ~ .icon::after{
+    content: "sad";
+}
+
+.fb-rating-card .card-container input[type=radio]#angry:checked + label::after{
+    transform: scale(1);
+}
+
+.fb-rating-card .card-container input[type=radio]#angry:checked ~ .icon{
+    background-position: -40rem 0;
+}
+
+.fb-rating-card .card-container input[type=radio]#angry:checked ~ .icon::after{
+    content: "angry";
+}
+
+
+.fb-rating-card .submit-btn{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+    padding: 0.625rem 2.5rem;
+    display: inline-flex;
+    border-radius: 0.25rem;
+    border: none;
+    background-color: #212121;
+    color: #fcda6a;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+}
+
+.fb-rating-card .submit-btn:hover{
+    background-color: #3b3b3b;
+    cursor: pointer;
+}
+
